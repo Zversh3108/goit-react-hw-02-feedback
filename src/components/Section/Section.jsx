@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Container } from './Section.Styled';
+import PropTypes from 'prop-types';
 export class Section extends Component {
   render() {
     return (
@@ -9,4 +10,8 @@ export class Section extends Component {
       </Container>
     );
   }
+  static propTypes = {
+    title: PropTypes.string.isRequired,
+    children: PropTypes.node.isRequired,
+  };
 }

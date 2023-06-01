@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { List } from './Statistics.Styled';
+import PropTypes from 'prop-types';
 export class Statistics extends Component {
   render() {
     return (
@@ -17,4 +18,11 @@ export class Statistics extends Component {
       </div>
     );
   }
+  static propTypes = {
+    good: PropTypes.number.isRequired,
+    neutral: PropTypes.number.isRequired,
+    bad: PropTypes.number.isRequired,
+    total: PropTypes.number.isRequired,
+    positivePercentage: PropTypes.number.isRequired,
+  };
 }
